@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shailesh Mohan Shukla – Data Science & Machine Learning Portfolio" />
+  <title>Shailesh Mohan Shukla | Data Science & Machine Learning Professional</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ SPLASH SCREEN ═══════════════════════════ -->
+  <div id="splash">
+    <div class="splash-monogram">SMS</div>
+    <div class="splash-bar-wrap"><div class="splash-bar" id="splashBar"></div></div>
+    <p class="splash-label">INITIALIZING NEURAL DATA HUBS…</p>
+  </div>
+
+  <!-- ═══════════════════════════ CYBER HUD SECTION POPUP ═══════════════════════════ -->
+  <div id="cyberHud" class="cyber-hud-popup">
+    <div class="hud-scanner"></div>
+    <div class="hud-header">
+      <span class="hud-status-dot"></span>
+      <span class="hud-system-title">SYSTEM ONLINE</span>
+    </div>
+    <div class="hud-content">
+      <p class="hud-label">ACTIVE AREA</p>
+      <p class="hud-value" id="hudActiveSection">LOADING...</p>
+    </div>
+    <div class="hud-footer">
+      <span class="hud-coords">SEC-SCAN // 01</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ CANVAS BG ═══════════════════════════ -->
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- ═══════════════════════════ SCROLL PROGRESS ═══════════════════════════ -->
+  <div id="scrollProgress"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">SMS</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home"          class="nav-link">Home</a>
+        <a href="#about"         class="nav-link">About & Education</a>
+        <a href="#experience"    class="nav-link">Experience</a>
+        <a href="#projects"      class="nav-link">Projects</a>
+        <a href="#skills"        class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#solve"         class="nav-link">Solve a Problem</a>
+        <a href="#contact"       class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+        <button id="burgerBtn"   aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
+    <a href="#home"          class="drawer-link">Home</a>
+    <a href="#about"         class="drawer-link">About & Education</a>
+    <a href="#experience"    class="drawer-link">Experience</a>
+    <a href="#projects"      class="drawer-link">Projects</a>
+    <a href="#skills"        class="drawer-link">Skills</a>
+    <a href="#certifications" class="drawer-link">Certifications</a>
+    <a href="#solve"         class="drawer-link">Solve a Problem</a>
+    <a href="#contact"       class="drawer-link">Contact</a>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <main>
+
+    <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+    <section id="home" class="hero">
+      <div class="hero-content reveal">
+        <div class="hero-badge">⚡ Machine Learning & Data Science Intern</div>
+        <h1 class="hero-name">Shailesh Mohan<br/><span class="gradient-text">Shukla</span></h1>
+        <p class="hero-title">B.Tech Computer Science Student &nbsp;·&nbsp; Data Science Professional &nbsp;·&nbsp; ML Engineer</p>
+        <p class="hero-tagline">Leveraging Python and machine learning to build predictive models, perform customer churn analysis, and solve complex, real-world business challenges.</p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary">View Experience <i class="fa-solid fa-arrow-down"></i></a>
+          <a href="https://drive.google.com/drive/folders/1vOcVlQu7Mog24fGHNjTTcVfI0Fa2JjLh" target="_blank" class="btn btn-outline">Browse Drive Certificates <i class="fa-solid fa-folder-open"></i></a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/shiv908893" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/shailesh-mohan-shukla-683044271" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:shailesh.mohan.shukla@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-avatar reveal">
+        <div class="avatar-ring"></div>
+        <div class="avatar-inner">
+          <img src="Profile Pic .png" alt="Shailesh Mohan Shukla" class="avatar-img" />
+        </div>
+        <div class="avatar-glow"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ IMPACT STRIP ═══════════════════════════ -->
+    <section class="impact-strip">
+      <div class="impact-item reveal"><span class="impact-num" data-target="7">0</span><span class="impact-plus">+</span><p>Core Projects</p></div>
+      <div class="impact-item reveal"><span class="impact-num" data-target="6">0</span><span class="impact-plus">+</span><p>Data Science Internships</p></div>
+      <div class="impact-item reveal"><span class="impact-num" data-target="8">0</span><span class="impact-plus">+</span><p>Global Certifications</p></div>
+      <div class="impact-item reveal"><span class="impact-num" data-target="2">0</span><span class="impact-plus"></span><p>Academic References</p></div>
+    </section>
+
+    <!-- ═══════════════════════════ ABOUT & EDUCATION ═══════════════════════════ -->
+    <section id="about" class="section">
+      <h2 class="section-title reveal">About &amp; <span class="gradient-text">Education</span></h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I am an analytical and detail-oriented <strong>Data Science & Machine Learning professional</strong> with a strong foundation in Computer Science. Currently, I am gaining intensive hands-on experience in predictive modeling, exploratory data analysis (EDA), statistical modeling, and data visualization through competitive industry internships.</p>
+          <p>I am highly committed to utilizing Python, SQL, and machine learning frameworks to solve actual business challenges, convert raw data into actionable insights, and build elegant models.</p>
+        </div>
+        <div class="about-card glass reveal">
+          <h3>Contact & Info</h3>
+          <div class="info-row"><span>Location</span><span>Rudrapur, Uttarakhand</span></div>
+          <div class="info-row"><span>Email</span><span style="font-size: 0.8rem;">shailesh.mohan.shukla@gmail.com</span></div>
+          <div class="info-row"><span>LinkedIn</span><span><a href="https://www.linkedin.com/in/shailesh-mohan-shukla-683044271" target="_blank" style="color:inherit;">shailesh-mohan-shukla-683044271</a></span></div>
+          <div class="info-row"><span>Focus</span><span>Data Analysis, ML, EDA</span></div>
+          <div class="info-row"><span>Status</span><span class="badge-green">Open for Internships</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+    <section id="experience" class="section">
+      <h2 class="section-title reveal">Professional <span class="gradient-text">Experience</span></h2>
+      <p class="section-sub reveal">A comprehensive look at my internships, training programs, and leadership roles.</p>
+
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Machine Learning Intern</h3>
+                <p class="tl-company"><i class="fa-solid fa-building"></i> Codtech IT Solutions</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Mar 2026 – Present</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Built robust Machine Learning models and conducted end-to-end data preprocessing pipelines.</li>
+                <li>Collaborated closely on real-world AI projects to translate data into direct analytical solutions.</li>
+                <li>Strengthened problem-solving capabilities, technical teamwork, and cross-functional team communication skills.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Campus Ambassador</h3>
+                <p class="tl-company"><i class="fa-solid fa-users"></i> LaunchEd Global</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Feb 2026 – Apr 2026</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Promoted skill-based educational programs and organized strategic networking workshops on campus.</li>
+                <li>Successfully built student networks and represented JBIT actively in marketing initiatives.</li>
+                <li>Developed strong campus leadership, public speaking, and community growth marketing skills.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Campus Ambassador</h3>
+                <p class="tl-company"><i class="fa-solid fa-users"></i> SmartED Innovations</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Feb 2026 – Apr 2026</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Represented the organization at JBIT campus level, advocating and promoting learning initiatives.</li>
+                <li>Enhanced collaborative networking, student outreach, and public relations capabilities.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Data Science Intern</h3>
+                <p class="tl-company"><i class="fa-solid fa-building"></i> Cognifyz Technologies</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Feb 2026 – Mar 2026</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Worked actively on quantitative data analysis, extensive dataset exploration, and data cleansing.</li>
+                <li>Applied data-driven methodologies and statistical formulations to resolve complex problems.</li>
+                <li>Enhanced core problem-solving, algorithmic thinking, and peer-to-peer technical collaboration.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Machine Learning Intern</h3>
+                <p class="tl-company"><i class="fa-solid fa-robot"></i> SkillCraft Technology</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Feb 2026 – Mar 2026</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Built and evaluated standard Machine Learning algorithms using scikit-learn.</li>
+                <li>Applied advanced feature engineering, feature scaling, and feature selection models.</li>
+                <li>Strengthened rigorous analytical thinking and algorithmic model fine-tuning.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Data Science Intern</h3>
+                <p class="tl-company"><i class="fa-solid fa-chart-pie"></i> SaiKet Systems</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Jan 2026 – Mar 2026</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Acquired extensive hands-on experience in Exploratory Data Analysis (EDA) on raw tabular data.</li>
+                <li>Designed, trained, and tested ML models alongside clean, informative visualizations using Matplotlib & Seaborn.</li>
+                <li>Enhanced overall technical proficiency, statistics capabilities, and technical presentation skills.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Winter Training Program</h3>
+                <p class="tl-company"><i class="fa-solid fa-graduation-cap"></i> IIT Kanpur</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Dec 2025 – Jan 2026</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Completed intensive Java Training (covering both Fundamental Core and Advanced Architecture).</li>
+                <li>Gained solid, production-ready expertise in Object-Oriented Programming (OOP), Multithreading, Exceptions, and JDBC.</li>
+                <li>Applied concepts to develop console applications connecting to relational databases.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass" data-acc>
+            <div class="tl-header" role="button" tabindex="0">
+              <div>
+                <h3 class="tl-role">Summer Training Program</h3>
+                <p class="tl-company"><i class="fa-solid fa-graduation-cap"></i> IIT Kanpur</p>
+              </div>
+              <div class="tl-meta">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> Jul 2025 – Sep 2025</span>
+                <i class="fa-solid fa-chevron-down tl-chevron"></i>
+              </div>
+            </div>
+            <div class="tl-body">
+              <ul>
+                <li>Focused on the Python ecosystem: specialized in NumPy, Pandas, Matplotlib, and scripting libraries.</li>
+                <li>Completed multiple automation projects including a comprehensive Quiz Management System and BeautifulSoup web scrapers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+    <section id="projects" class="section">
+      <h2 class="section-title reveal">Projects &amp; <span class="gradient-text">Showcase</span></h2>
+      <p class="section-sub reveal">Key research, analytical engineering, and data science projects constructed during my education.</p>
+      <div class="projects-grid">
+
+        <div class="project-card glass reveal" data-tilt>
+          <div class="project-img" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div class="project-body">
+            <h3>Tata Business Analytics Project</h3>
+            <p>Designed clean, interactive executive dashboards using Power BI and Tableau. Preprocessed complex transactional datasets using Python to render core actionable commercial insights.</p>
+            <div class="tech-badges">
+              <span>Python</span><span>Power BI</span><span>Tableau</span><span>Data Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal" data-tilt>
+          <div class="project-img" style="background:linear-gradient(135deg,#06b6d4,#0284c7)">
+            <i class="fa-solid fa-handshake-angle"></i>
+          </div>
+          <div class="project-body">
+            <h3>Deloitte Consulting Dashboard</h3>
+            <p>Applied rigorous predictive analytics and statistical operations on massive datasets, creating highly specialized functional dashboards to assist executive business workflows.</p>
+            <div class="tech-badges">
+              <span>Predictive Modeling</span><span>Dashboarding</span><span>Python</span><span>Data Science</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal" data-tilt>
+          <div class="project-img" style="background:linear-gradient(135deg,#10b981,#059669)">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="project-body">
+            <h3>Quiz Management System</h3>
+            <p>A Python-engineered robust command-line application supporting customizable questions, structured grading algorithms, automatic feedback loops, and CSV/JSON state persistence.</p>
+            <div class="tech-badges">
+              <span>Python</span><span>NumPy</span><span>Pandas</span><span>Workflow Automation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal" data-tilt>
+          <div class="project-img" style="background:linear-gradient(135deg,#f59e0b,#d97706)">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="project-body">
+            <h3>Java Console Systems</h3>
+            <p>Engineered object-oriented console applications incorporating secure MySQL JDBC database connectivity, highly active multithreading elements, and custom error validation traps.</p>
+            <div class="tech-badges">
+              <span>Java</span><span>JDBC</span><span>MySQL</span><span>Multithreading</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal" data-tilt>
+          <div class="project-img" style="background:linear-gradient(135deg,#ec4899,#db2777)">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <div class="project-body">
+            <h3>Machine Learning Model Suites</h3>
+            <p>Constructed, fine-tuned, and cross-validated various machine learning predictive classifiers with strict exploratory data preprocessing, addressing complex customer churn behaviors.</p>
+            <div class="tech-badges">
+              <span>scikit-learn</span><span>Feature Engineering</span><span>EDA</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass reveal" data-tilt>
+          <div class="project-img" style="background:linear-gradient(135deg,#8b5cf6,#6366f1)">
+            <i class="fa-solid fa-calculator"></i>
+          </div>
+          <div class="project-body">
+            <h3>Exploratory Data Science &amp; Analysis</h3>
+            <p>Structured end-to-end data analytics scripts, formulating data visualizations, trend analyses, and hypothesis checks to translate massive tables into visual data cards.</p>
+            <div class="tech-badges">
+              <span>Pandas</span><span>Seaborn</span><span>Matplotlib</span><span>Data Cleaning</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+    <section id="skills" class="section">
+      <h2 class="section-title reveal">Technical <span class="gradient-text">Skills</span></h2>
+      <p class="section-sub reveal">My software ecosystem and computational toolkit, grouped by function.</p>
+      <div class="skills-container">
+
+        <div class="skill-group glass reveal">
+          <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">Python</span>
+            <span class="skill-chip">SQL</span>
+            <span class="skill-chip">C</span>
+            <span class="skill-chip">C++</span>
+            <span class="skill-chip">Java</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <h3><i class="fa-solid fa-chart-column"></i> Data Visualization &amp; BI</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">Power BI</span>
+            <span class="skill-chip">Tableau</span>
+            <span class="skill-chip">Matplotlib</span>
+            <span class="skill-chip">Seaborn</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <h3><i class="fa-solid fa-layer-group"></i> Frameworks &amp; Toolkits</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">NumPy</span>
+            <span class="skill-chip">Pandas</span>
+            <span class="skill-chip">scikit-learn</span>
+            <span class="skill-chip">BeautifulSoup</span>
+            <span class="skill-chip">MS Excel</span>
+            <span class="skill-chip">MS Word</span>
+          </div>
+        </div>
+
+        <div class="skill-group glass reveal">
+          <h3><i class="fa-solid fa-language"></i> Languages</h3>
+          <div class="skill-chips">
+            <span class="skill-chip">English (Fluent)</span>
+            <span class="skill-chip">Hindi (Native)</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ CERTIFICATIONS ═══════════════════════════ -->
+    <section id="certifications" class="section">
+      <h2 class="section-title reveal">Certifications &amp; <span class="gradient-text">Awards</span></h2>
+      <p class="section-sub reveal">Verified training, industry credentials, and active achievements obtained from globally leading enterprises.</p>
+      
+      <div class="certs-grid">
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-chart-simple"></i>
+          <h4>Tata Analytics &amp; Visuals</h4>
+          <p>Data visualization using Power BI & Tableau.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-briefcase"></i>
+          <h4>Deloitte Consulting Work</h4>
+          <p>Practical data analytics and prediction dashboard structures.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h4>Master AI in Marketing</h4>
+          <p>Applying advanced AI techniques for marketing strategies.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-database"></i>
+          <h4>Power BI Micro Course</h4>
+          <p>Core business intelligence dashboards and analysis workflows.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-building-shield"></i>
+          <h4>National IP Awareness</h4>
+          <p>Intellectual Property Rights and innovation patents awareness.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-plane"></i>
+          <h4>Bharat Space drone/space</h4>
+          <p>Aero drone and space technology applications in defense.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-star"></i>
+          <h4>Applied Learning Suite</h4>
+          <p>Practical certifications mapped to hands-on Machine Learning.</p>
+        </div>
+        <div class="cert-card glass reveal">
+          <i class="fa-solid fa-users-gear"></i>
+          <h4>Workshop Series</h4>
+          <p>Extensive participation across leading technical forums.</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════════════════ SOLVE A PROBLEM ═══════════════════════════ -->
+    <section id="solve" class="section">
+      <h2 class="section-title reveal">Solve a <span class="gradient-text">Problem</span></h2>
+      <p class="section-sub reveal">Submit any analytical inquiry, machine learning query, or business case to get a detailed technical consultation.</p>
+      <div class="solve-card glass reveal">
+        <form id="solveForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="solveName">Your Name</label>
+              <input type="text" id="solveName" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="solveEmail">Email</label>
+              <input type="email" id="solveEmail" placeholder="your.name@gmail.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="solveProblem">Problem Description</label>
+            <textarea id="solveProblem" rows="5" placeholder="State your data analytical task, model formulation bug, or algorithmic query..." required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="solveFile">Upload Screenshot / Dataset Spec (optional)</label>
+            <div class="file-upload" id="fileUploadArea">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <p>Drag &amp; drop or <span>browse files</span></p>
+              <input type="file" id="solveFile" accept="image/*,.pdf,.doc,.docx,.csv,.xlsx" />
+            </div>
+            <p class="file-name" id="fileName"></p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Problem for Review <i class="fa-solid fa-paper-plane"></i></button>
+          <div class="form-success" id="formSuccess">✅ Processing Request! I will review this data problem and follow up with you.</div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ RESUME ═══════════════════════════ -->
+    <section id="resume" class="section resume-section">
+      <h2 class="section-title reveal">Academic <span class="gradient-text">Resume</span></h2>
+      <p class="section-sub reveal">My comprehensive academic profile and list of verified credentials available for direct review.</p>
+      <div class="resume-actions reveal">
+        <a href="CV Resume.pdf" class="btn btn-primary" target="_blank">
+          <i class="fa-solid fa-eye"></i> Open PDF Resume
+        </a>
+        <a href="https://drive.google.com/drive/folders/1vOcVlQu7Mog24fGHNjTTcVfI0Fa2JjLh" class="btn btn-outline" target="_blank">
+          <i class="fa-solid fa-folder-open"></i> Access Drive Credentials
+        </a>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2026 Shailesh Mohan Shukla · Powered by Python &amp; Data Insights</p>
+      <div class="footer-socials">
+        <a href="https://github.com/shiv908893"   target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shailesh-mohan-shukla-683044271" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:shailesh.mohan.shukla@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile bottom nav -->
+  <nav class="bottom-nav">
+    <a href="#home"       class="bnav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+    <a href="#projects"   class="bnav-item"><i class="fa-solid fa-code"></i><span>Projects</span></a>
+    <a href="#skills"     class="bnav-item"><i class="fa-solid fa-layer-group"></i><span>Skills</span></a>
+    <a href="#solve"      class="bnav-item"><i class="fa-solid fa-lightbulb"></i><span>Solve</span></a>
+    <a href="#contact"    class="bnav-item"><i class="fa-solid fa-envelope"></i><span>Contact</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
